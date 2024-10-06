@@ -53,7 +53,7 @@ $ chmod 700 get_helm.sh
 $ ./get_helm.sh
 ```
 
-Instalação do chart da bitnami com o uso de valores personalizados por meio do arquivo values.yaml
+Instalação do chart mysql da bitnami com o uso de valores personalizados por meio do arquivo values.yaml
 ```
 helm install my-mysql bitnami/mysql -f values.yaml
 ```
