@@ -1,0 +1,35 @@
+global:
+  storageClass: "standard"
+image:
+  registry: docker.io
+  repository: bitnami/mysql
+  tag: 8.0.32
+  pullPolicy: IfNotPresent
+
+primary:
+  replicaCount: 1
+  resources:
+    requests:
+      cpu: 250m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  persistence:
+    enabled: true
+    size: 4Gi
+    accessModes:
+      - ReadWriteOnce
+  containerPorts:
+    mysql: 3306
+
+  service:
+    type: ClusterIP
+    ports:
+      mysql: 3306
+
+auth:
+  rootPassword: "my_root_password123456"
+  database: "my_database"
+  username: "username"
+  password: "password"
