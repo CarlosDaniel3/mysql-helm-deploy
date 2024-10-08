@@ -58,11 +58,11 @@ Instalação do chart mysql da bitnami com o uso de valores personalizados por m
 helm install my-mysql bitnami/mysql -f values.yaml
 ```
 
-listar os pods MySQL que foram criados
+Listagem dos pods MySQL que foram criados
 ```
 kubectl get po -l app=mysql
 ```
-Depois, acessar um dos pods
+Acesso a um pod
 ```
 kubectl exec -it <nome-do-pod> -- bash
 ```
