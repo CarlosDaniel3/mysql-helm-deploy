@@ -53,12 +53,10 @@ $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scr
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
 ```
-
 Instalação do chart mysql da bitnami com o uso de valores personalizados por meio do arquivo values.yaml
 ```
 helm install my-mysql bitnami/mysql -f values.yaml
 ```
-
 Listagem dos pods MySQL que foram criados
 ```
 kubectl get po -l app=mysql
@@ -81,3 +79,8 @@ USE my_database;
 CREATE TABLE test_table (id INT PRIMARY KEY, name VARCHAR(50));
 SHOW TABLES;
 ```
+
+## Resultado esperado dos comandos de validação
+<div style="text-align: center"><br>
+    <img align="center" alt="result" height="400px" width="700px" src="https://github.com/CarlosDaniel3/mysql-helm-deploy/blob/main/assets/result.png">
+</div>
