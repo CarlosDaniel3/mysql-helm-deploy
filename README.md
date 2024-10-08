@@ -60,13 +60,13 @@ helm install my-mysql bitnami/mysql -f values.yaml
 
 listar os pods MySQL que foram criados
 ```
-kubectl get po
+kubectl get po -l app=mysql
 ```
 Depois, acessar um dos pods
 ```
 kubectl exec -it <nome-do-pod> -- bash
 ```
-Conectar-se ao MySQL
+Conectar-se ao MySQL(Lembrar de utilizar a senha definida em values.yaml)
 ```
 mysql -u username -p
 ```
@@ -76,7 +76,7 @@ SHOW DATABASES;
 ```
 Por fim, executar alguns comandos básicos para finalizar os testes
 ```
-USE mysql_database;
+USE my_database;
 CREATE TABLE test_table (id INT PRIMARY KEY, name VARCHAR(50));
 SHOW TABLES;
 ```
