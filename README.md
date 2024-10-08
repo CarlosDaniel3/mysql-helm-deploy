@@ -8,7 +8,6 @@ O objetivo é configurar o armazenamento persistente para os dados e expor o ser
 ```yaml
 global:
   storageClass: "standard"
-
 image:
   registry: docker.io
   repository: bitnami/mysql
@@ -31,6 +30,8 @@ primary:
       - ReadWriteOnce
   containerPorts:
     mysql: 3306
+  podLabels:
+    app: mysql
 
   service:
     type: ClusterIP
