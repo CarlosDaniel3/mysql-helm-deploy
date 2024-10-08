@@ -60,7 +60,7 @@ helm install my-mysql bitnami/mysql -f values.yaml
 
 listar os pods MySQL que foram criados
 ```
-kubectl get po -l app=mysql
+kubectl get po
 ```
 Depois, acessar um dos pods
 ```
